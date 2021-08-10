@@ -1,0 +1,20 @@
+package com.bridgelabz.employeepayrollapp.service;
+
+import com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDTO;
+import com.bridgelabz.employeepayrollapp.model.EmployeePayrollData;
+import java.util.List;
+/*
+* Employee Payroll Service Interface */
+
+public interface IEmployeePayrollService {
+
+    List<EmployeePayrollData> getEmployeePayrollData();
+
+    EmployeePayrollData getEmployeePayrollDataById(int empId);
+
+    EmployeePayrollData createEmployeePayrollData(EmployeePayrollDTO empPayrollDTO);
+
+    EmployeePayrollData updateEmployeePayrollData(EmployeePayrollDTO empPayrollDTO);
+
+    void deleteEmployeePayrollData(int empId);
+}
