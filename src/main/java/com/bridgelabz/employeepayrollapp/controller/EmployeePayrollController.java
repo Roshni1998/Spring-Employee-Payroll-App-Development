@@ -18,8 +18,10 @@ import java.util.List;
 * */
 
 @RestController
+
 @RequestMapping("/employeepayrollservice")
 @Slf4j
+@CrossOrigin
 public class EmployeePayrollController {
 
     @Autowired
@@ -29,7 +31,7 @@ public class EmployeePayrollController {
     * Purpose : Creating EmployeePayroll Model Object by passing DTO to it using that data model
     * @return
     * */
-    @RequestMapping(value = {",", "/", "/get"})
+    @RequestMapping(value = {"", "/", "/get"})
     public ResponseEntity<ResponseDTO> getEmployeePayrollData() {
         List<EmployeePayrollData> empDataList = null;
         empDataList = employeePayrollService.getEmployeePayrollData();

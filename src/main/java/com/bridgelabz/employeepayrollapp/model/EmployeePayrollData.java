@@ -5,6 +5,7 @@ import com.bridgelabz.employeepayrollapp.dto.EmployeePayrollDTO;
 import lombok.Data;
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -14,7 +15,7 @@ public @Data class EmployeePayrollData {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "employee_id")
-    private int employeeId;
+    private int id;
     @Column(name = "name")
     private String name;
     private long salary;
